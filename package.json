@@ -1,0 +1,31 @@
+{
+  "name": "pymsphere-server",
+  "version": "1.0.0",
+  "description": "PymSphere backend API (contact form service)",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeeDev-ValorCollective/pymSphere-server.git"
+  },
+  "keywords": [],
+  "author": "BeeDev Services",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeeDev-ValorCollective/pymSphere-server/issues"
+  },
+  "homepage": "https://github.com/BeeDev-ValorCollective/pymSphere-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "nodemailer": "^7.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
