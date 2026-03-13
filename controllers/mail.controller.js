@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer')
 const MailModel = require('../models/mail.model')
 const Site_Link = process.env.SITE_LINK
 const Unsub_Link = process.env.UNSUB_LINK
-const Email_Provider = process.env.CONTACT_EMAIL_USER
+const Email_Provider = process.env.MAIN_EMAIL_USER
 
 
 const sendContactMail = async (req, res) => {
@@ -18,8 +18,8 @@ const sendContactMail = async (req, res) => {
 }
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_HOST,
-            port: 465,
-            secure: true,
+            port: process.env.EMAIL_PORT,
+            secure: process.env.EMAIL_SSL,
             auth: {
                 user: process.env.CONTACT_EMAIL_USER,
                 pass: process.env.CONTACT_EMAIL_PASS,
